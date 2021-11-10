@@ -27,7 +27,7 @@ const NavWrapper = styled.nav`
     }
   }
 `;
-
+getComputedStyle()
 const Nav = () => {
   return (
     <NavWrapper>
