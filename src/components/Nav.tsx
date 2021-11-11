@@ -27,25 +27,25 @@ const NavWrapper = styled.nav`
     }
   }
 `;
-getComputedStyle()
+
 const Nav = () => {
   return (
     <NavWrapper>
       <ul>
         <li>
-          <svg className="icon" fill={'red'}>
+          <svg className="icon">
             <use xlinkHref="#tags"/>
           </svg>
           <Link to="/tags">标签</Link>
         </li>
         <li>
-          <svg className="icon" fill={'green'}>
+          <svg className="icon">
             <use xlinkHref="#money"/>
           </svg>
           <Link to="/money">支出</Link>
         </li>
         <li>
-          <svg className="icon" fill={'blue'}>
+          <svg className="icon">
             <use xlinkHref="#statistics"/>
           </svg>
           <Link to="/statistics">Statistics</Link>
