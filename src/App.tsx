@@ -5,10 +5,10 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
-import styled from 'styled-components';
-import Nav from 'components/Nav';
-import Layout from 'components/Layout';
-
+import Tags from './pages/Tags';
+import Money from './pages/Money';
+import Statistics from './pages/Statistics';
+import NoMatch from './pages/NoMatch';
 
 function App() {
   return (
@@ -23,36 +23,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>Wrong Url input</div>
-  );
-}
-
-function Statistics() {
-  return (
-    <Layout>
-      <h2>Statistics</h2>
-    </Layout>
-  );
-}
-
-function Tags() {
-  return (
-    <Layout>
-      <h2>标签</h2>
-    </Layout>
-  );
-}
-
-function Money() {
-  return (
-    <Layout>
-      <h2>支出</h2>
-    </Layout>
   );
 }
 
