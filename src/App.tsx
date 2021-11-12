@@ -9,10 +9,17 @@ import Tags from './pages/Tags';
 import Money from './pages/Money';
 import Statistics from './pages/Statistics';
 import NoMatch from './pages/NoMatch';
+import styled from 'styled-components';
+
+const AppWrapper = styled.div`
+color: #333;
+`
 
 function App() {
   return (
+    <AppWrapper>
     <Router>
+
       <Switch>
         <Route path="/tags"> <Tags/> </Route>
         <Route path="/money"><Money/></Route>
@@ -23,6 +30,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </AppWrapper>
   );
 }
 
