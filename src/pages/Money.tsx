@@ -4,8 +4,12 @@ import styled from 'styled-components';
 
 const TagsSection = styled.section`
   background: #FFFFFF;
-  border: 1px solid red;
   padding: 12px 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 
   > ol {
     margin: 0 -12px;
@@ -107,40 +111,51 @@ const NumberPadSection = styled.section`
       &.zero {
         width: 50%;
       }
+
       &:nth-child(1) {
         background: #f2f2f2;
       }
+
       &:nth-child(2),
       &:nth-child(5) {
         background: #e0e0e0;
       }
+
       &:nth-child(3),
       &:nth-child(6),
       &:nth-child(9) {
         background: #d3d3d3;
       }
+
       &:nth-child(4),
       &:nth-child(7),
       &:nth-child(10) {
         background: #c1c1c1;
       }
+
       &:nth-child(8),
       &:nth-child(11),
       &:nth-child(13) {
         background: #b8b8b8;
       }
-      &:nth-child(12){
-        background: #9a9a9a;      
+
+      &:nth-child(12) {
+        background: #9a9a9a;
       }
+
       &:nth-child(14) {
         background: #a9a9a9;
       }
-  }
+    }
+`;
+const MyLayout = styled(Layout)`
+  display: flex;
+  flex-direction: column;
 `;
 
 function Money() {
   return (
-    <Layout>
+    <MyLayout className="xxx">
       <TagsSection>
         <ol>
           <li>衣</li>
@@ -181,7 +196,7 @@ function Money() {
           <button>.</button>
         </div>
       </NumberPadSection>
-    </Layout>
+    </MyLayout>
   );
 }
 
