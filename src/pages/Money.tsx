@@ -14,7 +14,7 @@ const MyLayout = styled(Layout)`
 function Money() {
   return (
     <MyLayout>
-      <TagsSection/>
+      <TagsSection />
       <NotesSection>
         <label>
           <span>备注</span>

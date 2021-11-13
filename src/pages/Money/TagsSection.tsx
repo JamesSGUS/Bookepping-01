@@ -32,10 +32,11 @@ const Wrapper = styled.section`
     border-bottom: 1px solid #333;
   }
 `;
+
+
 const TagsSection: React.FC = (props:any) => {
   let initialState;
-  const [tags, setTags] = useState(initialState: ['衣', '食', '住', '行'])
-
+  const [tags, setTags] = useState(['衣', '食', '住', '行']);
   return (
     <Wrapper>
       <ol>
