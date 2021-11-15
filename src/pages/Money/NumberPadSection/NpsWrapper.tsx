@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.section`
+const NpsWrapper = styled.section`
   display: flex;
   flex-direction: column;
 
@@ -68,4 +68,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export {Wrapper};
+export {NpsWrapper};

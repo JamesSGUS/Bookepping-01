@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Wrapper} from './NumberPadSection/Wrapper';
+import {NpsWrapper} from './NumberPadSection/NpsWrapper';
 import {generateOutput} from './NumberPadSection/generateOutput';
+import React, {useState} from 'react';
 
 
 const NumberPadSection: React.FC = () => {
@@ -25,8 +25,9 @@ const NumberPadSection: React.FC = () => {
       setOutput(generateOutput(text, output));
     }
   };
+
   return (
-    <Wrapper>
+    <NpsWrapper>
       <div className="output">
         {output}
       </div>
@@ -46,7 +47,7 @@ const NumberPadSection: React.FC = () => {
         <button className="zero">0</button>
         <button className="dot">.</button>
       </div>
-    </Wrapper>
+    </NpsWrapper>
   );
 };
 export {NumberPadSection};
