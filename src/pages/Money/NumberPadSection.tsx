@@ -1,142 +1,40 @@
-<<<<<<<<< Temporary merge branch 1
-import styled from 'styled-components';
-import React, {useState} from 'react';
-
-const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-
-  > .output {
-    background: white;
-    font-size: 36px;
-    line-height: 72px;
-    text-align: right;
-    padding: 0 16px;
-    box-shadow: inset 0 -5px 5px -2px rgba(0, 0, 0, 0.25),
-    inset 0 5px 5px -2px rgba(0, 0, 0, 0.25);
-  }
-
-  > .pad {
-    > button {
-      font-size: 18px;
-      float: left;
-      width: 25%;
-      height: 64px;
-
-      &.ok {
-        height: 128px;
-        float: right;
-      }
-
-      &.zero {
-        width: 50%;
-      }
-
-      &:nth-child(1) {
-        background: #f2f2f2;
-      }
-
-      &:nth-child(2),
-      &:nth-child(5) {
-        background: #e0e0e0;
-      }
-
-      &:nth-child(3),
-      &:nth-child(6),
-      &:nth-child(9) {
-        background: #d3d3d3;
-      }
-
-      &:nth-child(4),
-      &:nth-child(7),
-      &:nth-child(10) {
-        background: #c1c1c1;
-      }
-
-      &:nth-child(8),
-      &:nth-child(11),
-      &:nth-child(13) {
-        background: #b8b8b8;
-      }
-
-      &:nth-child(12) {
-        background: #9a9a9a;
-      }
-
-      &:nth-child(14) {
-        background: #a9a9a9;
-      }
-    }
-  }
-`;
-=========
-import React, {useState} from 'react';
-import {Wrapper} from './NumberPadSection/Wrapper';
+import React from 'react';
+import {NpsWrapper} from './NumberPadSection/NpsWrapper';
 import {generateOutput} from './NumberPadSection/generateOutput';
 
->>>>>>>>> Temporary merge branch 2
 
-const NumberPadSection: React.FC = () => {
-  const [output, _setOutput] = useState('0');
+type Props = {
+  value: number;
+  onChange: (value: number) => void;
+  onOk?: () => void;
+}
+const NumberPadSection: React.FC<Props> = (props) => {
+  const output = props.value.toString();
   const setOutput = (output: string) => {
+    let value;
     if (output.length > 16) {
-      output = output.slice(0, 16);
+      value = parseFloat(output.slice(0, 16));
     } else if (output.length === 0) {
-      output = '0';
+      value = 0;
+    } else {
+      value = parseFloat(output);
     }
-    _setOutput(output);
+    props.onChange(value);
   };
   const onClickButtonWrapper = (e: React.MouseEvent) => {
     const text = (e.target as HTMLButtonElement).textContent;
-    console.log(text);
     if (text === null) {return;}
-<<<<<<<<< Temporary merge branch 1
-    switch (text) {
-      case '0':
-      case '1':
-      case '2':
-      case '3':
-      case '4':
-      case '5':
-      case '6':
-      case '7':
-      case '8':
-      case '9':
-        if (output === '0') {
-          setOutput(text);
-        } else {
-          setOutput(output + text);
-        }
-        break;
-      case '.':
-        if (output.indexOf('.') >= 0) {return output;}
-        setOutput(output + '.');
-        break;
-      case '删除':
-        if (output.length === 1) {
-          setOutput('');
-        } else {
-          setOutput(output.slice(0, -1) || '');
-        }
-        break;
-
-      case '清空':
-        setOutput('');
-        break;
-      default:
-        return '';
-=========
     if (text === 'OK') {
-      //Todo
+      if (props.onOk) {props.onOk();}
       return;
     }
-    if ('0123456789.'.split('').concat(['Delete', 'Clear']).indexOf(text) >= 0) {
+    if ('0123456789.'.split('').concat(['删除', '清空']).indexOf(text) >= 0) {
       setOutput(generateOutput(text, output));
->>>>>>>>> Temporary merge branch 2
     }
+
   };
   return (
-    <Wrapper>
+    <NpsWrapper>
       <div className="output">
         {output}
       </div>
@@ -144,19 +42,11 @@ const NumberPadSection: React.FC = () => {
         <button>1</button>
         <button>2</button>
         <button>3</button>
-<<<<<<<<< Temporary merge branch 1
-        <button>删除</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>清空</button>
-=========
         <button>Delete</button>
         <button>4</button>
         <button>5</button>
         <button>6</button>
         <button>Clear</button>
->>>>>>>>> Temporary merge branch 2
         <button>7</button>
         <button>8</button>
         <button>9</button>
@@ -164,7 +54,9 @@ const NumberPadSection: React.FC = () => {
         <button className="zero">0</button>
         <button className="dot">.</button>
       </div>
-    </Wrapper>
+    </NpsWrapper>
   );
 };
+
+
 export {NumberPadSection};
