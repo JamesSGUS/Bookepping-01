@@ -29,7 +29,6 @@ type Props = {
   onChange: (value: string) => void;
 }
 const NoteSection: React.FC<Props> = (props) => {
-  let initialState;
   const note = props.value;
   const refInput = useRef<HTMLInputElement>(null);
   const onBlur = () => {
