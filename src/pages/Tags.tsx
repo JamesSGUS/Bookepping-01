@@ -6,7 +6,9 @@ function Tags() {
   const {tags, setTags} = useTags();
   return (
     <Layout>
-      <h2>标签</h2>
+      <ol>
+        {tags.map(tag => <li key={tags}>{tags}</li>)}
+      </ol>
     </Layout>
   );
 }
