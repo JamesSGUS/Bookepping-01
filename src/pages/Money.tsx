@@ -23,8 +23,6 @@ function Money() {
   const onChange = (obj: Partial<Selected>) => setSelected({
     ...selected, ...obj
   });
-  let obj;
-  onChange({tags: []});
   return (
     <MyLayout>
       <TagsSection value={selected.tags}
