@@ -26,16 +26,11 @@ const InputWrapper = styled.div`
   margin-top: 8px;
 `;
 const Tag: React.FC = (props) => {
-  const {findTag, updateTag} = useTags();
+  const {findTag, updateTag, deleteTag} = useTags();
   let {id: idString} = useParams<Params>();
   const tag = findTag(parseInt(idString));
-  return (
-    <Layout>
-      <Topbar>
-        <Icon name="left"/>
-        <span>Edit Tags</span>
-        <Icon/>
-      </Topbar>
+  const tagContent = (tag: { id: number; name: string }) => (
+    <div>
       <InputWrapper>
         <Input type="text" placeholder="Tag name" label="标签名："
                value={tag.name}
@@ -48,8 +43,21 @@ const Tag: React.FC = (props) => {
         <Space/>
         <Space/>
         <Space/>
-        <Button>Delete Tags</Button>
+        <Button onClick={() => deleteTag(tag.id)}>Delete Tags</Button>
       </Center>
+    </div>
+  );
+  if (tag) {
+
+  }
+  return (
+    <Layout>
+      <Topbar>
+        <Icon name="left"/>
+        <span>Edit Tags</span>
+        <Icon/>
+      </Topbar>
+      {tag ? tagContent(tag) : <Center>No tag ready</Center>}
     </Layout>
   );
 };
