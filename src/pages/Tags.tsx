@@ -1,9 +1,10 @@
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
 import React from 'react';
 import {useTags} from 'useTags';
 import styled from 'styled-components';
 import Icon from 'components/Icon';
 import {Link} from 'react-router-dom';
+import {Button} from 'components/Button';
 
 const TagList = styled.ol`
   font-size: 16px;
@@ -32,14 +33,7 @@ const Center = styled.div`
   align-items: center;
   flex-direction: column;
 `;
-const Button = styled.button`
-  font-size: 18px;
-  padding: 8px 12px;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  background: #f9ac2a;
-`;
+
 
 function Tags() {
   const {tags} = useTags();

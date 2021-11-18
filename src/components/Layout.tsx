@@ -12,7 +12,7 @@ const Main = styled.div`
   overflow: auto;
 `;
 
-const Layout =(props: any)=>{
+const Layout = (props: any) => {
   return (
     <Wrapper>
       <Main className={props.className}>
@@ -20,7 +20,7 @@ const Layout =(props: any)=>{
       </Main>
       <Nav/>
     </Wrapper>
-  )
+  );
 };
 
 export default Layout;
