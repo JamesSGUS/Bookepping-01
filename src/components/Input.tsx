@@ -26,7 +26,7 @@ const Input: React.FC<Props> = (props) => {
   const {label, children, ...rest} = props;
   return (
     <Label>
-      <span>备注:</span>
+      <span>标签名：</span>
       <input {...rest}/>
     </Label>);
 };

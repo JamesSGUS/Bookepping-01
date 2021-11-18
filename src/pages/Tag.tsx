@@ -5,6 +5,9 @@ import Layout from 'components/Layout';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
 import styled from 'styled-components';
+import {Input} from 'components/Input';
+import {Center} from 'components/Center';
+import {Space} from 'components/Space';
 
 type Params = {
   id: string;
@@ -17,6 +20,11 @@ const Topbar = styled.header`
   line-height: 20px;
   align-items: center;
 `;
+const InputWrapper = styled.div`
+  background: white;
+  padding: 0 16px;
+  margin-top: 8px;
+`;
 const Tag: React.FC = (props) => {
   const {findTag} = useTags();
   let {id} = useParams<Params>();
@@ -28,15 +36,15 @@ const Tag: React.FC = (props) => {
         <span>Edit Tags</span>
         <Icon/>
       </Topbar>
-      <div>
-        <label>
-          <span>标签名：</span>
-          <input type="text" placeholder="Tag name"/>
-        </label>
-      </div>
-      <div>
+      <InputWrapper>
+        <Input type="text" placeholder="Tag name" label="标签名：" value={tag.name}/>
+      </InputWrapper>
+      <Center>
+        <Space/>
+        <Space/>
+        <Space/>
         <Button>Delete Tags</Button>
-      </div>
+      </Center>
     </Layout>
   );
 };
