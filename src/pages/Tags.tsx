@@ -28,14 +28,14 @@ const TagList = styled.ol`
 `;
 
 function Tags() {
-  const {tags} = useTags();
+  const {tags, addTag} = useTags();
   // @ts-ignore
   return (
     <Layout>
       <TagList>
         {tags.map(tag => <li key={tag.id}>
             <Link to={'/tags/' + tag.id}>
-              <span className="oneLine">{tag.id}:{tag.name}</span>
+              <span className="oneLine">{tag.name}</span>
               <Icon name="right"/>
             </Link>
           </li>
@@ -45,7 +45,7 @@ function Tags() {
         <Space/>
         <Space/>
         <Space/>
-        <Button>Adding Tags</Button>
+        <Button onClick={addTag}>Adding Tags</Button>
       </Center>
     </Layout>
   );

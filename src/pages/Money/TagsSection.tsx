@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useTags} from 'useTags';
-import {createID} from 'lib/createID';
 
 const Wrapper = styled.section`
   background: #FFFFFF;
@@ -43,14 +42,9 @@ type Props = {
   onChange: (selected: number []) => void;
 }
 const TagsSection: React.FC<Props> = (props) => {
-  const {tags, setTags} = useTags();
+  const {tags, addTag} = useTags();
   const selectedTagIds = props.value;
-  const addTag = () => {
-    const tagName = window.prompt('New tag is:');
-    if (tagName !== null) {
-      setTags([...tags, {id: createID(), name: tagName}]);
-    }
-  };
+
   const onToggleTag = (tagID: number) => {
     const index = selectedTagIds.indexOf(tagID);
     if (index >= 0) {
