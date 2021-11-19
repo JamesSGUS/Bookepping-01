@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTags} from 'useTags';
-import {useParams} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import Layout from 'components/Layout';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
@@ -50,10 +50,14 @@ const Tag: React.FC = (props) => {
   if (tag) {
 
   }
+  const history = useHistory;
+  const onClickBack = () => {
+    window.history.back();
+  };
   return (
     <Layout>
       <Topbar>
-        <Icon name="left"/>
+        <Icon name="left" className="frank" onClick={onClickBack}/>
         <span>Edit Tags</span>
         <Icon/>
       </Topbar>
