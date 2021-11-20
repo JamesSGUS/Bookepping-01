@@ -20,8 +20,17 @@ export const useRecords = () => {
     window.localStorage.setItem('records', JSON.stringify(records));
   }, [records]);
   const addRecord = (newRecord: newRecordItem) => {
+    if (newRecord.amount <= 0) {
+      alert('Please input amount');
+      return false;
+    }
+    if (newRecord.tagIds.length === 0) {
+      alert('Please select tag');
+      return false;
+    }
     const record = {...newRecord, createdAt: (new Date()).toISOString()};
     setRecords([...records, record]);
+    return true;
   };
   return {records, addRecord};
 };

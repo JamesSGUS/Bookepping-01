@@ -28,9 +28,10 @@ function Money() {
     ...selected, ...obj
   });
   const submit = () => {
-    addRecord(selected);
-    alert('Data has been saved');
-    setSelected(defaultFormData);
+    if (addRecord(selected)) {
+      alert('Data has been saved');
+      setSelected(defaultFormData);
+    }
   };
   return (
     <MyLayout>
