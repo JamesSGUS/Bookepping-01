@@ -41,8 +41,8 @@ function Money() {
                    onChange={note => onChange({note})}/>
       <CategorySection value={selected.category}
                        onChange={category => onChange({category})}/>
-      <NumberPadSection value={selected.amount}
-                        onChange={amount => onChange({amount})}
+      <NumberPadSection value={selected.amount.toString()}
+                        onChange={value => onChange({amount: parseFloat(value)})}
                         onOk={submit}/>
     </MyLayout>
   );
