@@ -1,9 +1,9 @@
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
 import React, {ReactNode, useState} from 'react';
 import {CategorySection} from './Money/CategorySection';
 import styled from 'styled-components';
-import {RecordItem, useRecords} from '../hooks/useRecords';
-import {useTags} from '../hooks/useTags';
+import {RecordItem, useRecords} from 'hooks/useRecords';
+import {useTags} from 'hooks/useTags';
 import day from 'dayjs';
 
 const CategoryWrapper = styled.div`
@@ -85,7 +85,6 @@ function Statistics() {
     </Layout>
   );
 }
-
 
 export default Statistics;
 
