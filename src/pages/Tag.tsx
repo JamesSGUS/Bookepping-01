@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTags} from 'hooks/useTags';
-import {useHistory, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import Layout from 'components/Layout';
 import Icon from 'components/Icon';
 import {Button} from 'components/Button';
@@ -50,7 +50,6 @@ const Tag: React.FC = (props) => {
   if (tag) {
 
   }
-  const history = useHistory;
   const onClickBack = () => {
     window.history.back();
   };
