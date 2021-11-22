@@ -43,7 +43,7 @@ const Tag: React.FC = (props) => {
         <Space/>
         <Space/>
         <Space/>
-        <Button onClick={() => deleteTag(tag.id)}>Delete Tags</Button>
+        <Button onClick={() => deleteTag(tag.id)}>删除标签</Button>
       </Center>
     </div>
   );
@@ -57,10 +57,10 @@ const Tag: React.FC = (props) => {
     <Layout>
       <Topbar>
         <Icon name="left" className="frank" onClick={onClickBack}/>
-        <span>Edit Tags</span>
+        <span>编辑标签</span>
         <Icon/>
       </Topbar>
-      {tag ? tagContent(tag) : <Center>No tag ready</Center>}
+      {tag ? tagContent(tag) : <Center>全部删除？</Center>}
     </Layout>
   );
 };

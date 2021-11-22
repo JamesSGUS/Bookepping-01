@@ -15,7 +15,7 @@ const NavWrapper = styled.nav`
       width: 33.33%;
       text-align: center;
 
-      >a {
+      > a {
         padding: 4px;
         display: flex;
         flex-direction: column;
@@ -25,13 +25,15 @@ const NavWrapper = styled.nav`
           width: 24px;
           height: 24px;
         }
-        &.selected{
-          color:#f9ac2a;
-          .icon{
-            fill:#f9ac2a;
+
+        &.selected {
+          color: #f9ac2a;
+
+          .icon {
+            fill: #f9ac2a;
           }
         }
-      }     
+      }
     }
   }
 `;
@@ -43,19 +45,19 @@ const Nav = () => {
         <li>
           <NavLink to="/tags" activeClassName="selected">
             <Icon name="tags"/>
-            标签
+            案件类型
           </NavLink>
         </li>
         <li>
           <NavLink to="/money" activeClassName="selected">
             <Icon name="money"/>
-            Expenses
+            支出
           </NavLink>
         </li>
         <li>
           <NavLink to="/statistics" activeClassName="selected">
             <Icon name="statistics"/>
-            Statistics
+            统计
           </NavLink>
         </li>
       </ul>

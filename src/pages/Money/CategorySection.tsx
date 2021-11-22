@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React, {useState} from 'react';
+import {Sglogo} from 'components/Sglogo';
+import img from './src/images/logo.jpg';
 
 const Wrapper = styled.section`
   font-size: 24px;
@@ -26,12 +28,13 @@ const Wrapper = styled.section`
     }
   }
 `;
+
 type Props = {
   value: '-' | '+';
   onChange: (value: '-' | '+') => void;
 }
 const CategorySection: React.FC<Props> = (props) => {
-  const categoryMap = {'-': 'Expenses', '+': 'Income'};
+  const categoryMap = {'-': '支出', '+': '收入'};
   type Keys = keyof (typeof categoryMap)
   const [categoryList] = useState<Keys[]>(['-', '+']);
   const category = props.value;
@@ -45,7 +48,12 @@ const CategorySection: React.FC<Props> = (props) => {
           </li>
         )}
       </ul>
+      <Sglogo>
+        <img src="./images/logo.jpg" alt=""/>
+      </Sglogo>
     </Wrapper>
+
   );
 };
+
 export {CategorySection};

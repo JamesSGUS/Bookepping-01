@@ -30,7 +30,7 @@ const NumberPadSection: React.FC<Props> = (props) => {
       if (props.onOk) {props.onOk();}
       return;
     }
-    if ('0123456789.'.split('').concat(['Delete', 'Clear']).indexOf(text) >= 0) {
+    if ('0123456789.'.split('').concat(['删除', '清空']).indexOf(text) >= 0) {
       setOutput(generateOutput(text, output));
     }
 
@@ -44,11 +44,11 @@ const NumberPadSection: React.FC<Props> = (props) => {
         <button>1</button>
         <button>2</button>
         <button>3</button>
-        <button>Delete</button>
+        <button>删除</button>
         <button>4</button>
         <button>5</button>
         <button>6</button>
-        <button>Clear</button>
+        <button>清空</button>
         <button>7</button>
         <button>8</button>
         <button>9</button>

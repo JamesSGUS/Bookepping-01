@@ -2,7 +2,7 @@ import React from 'react';
 
 function NoMatch() {
   return (
-    <div>Wrong Url input</div>
+    <div>错误网址</div>
   );
 }
 

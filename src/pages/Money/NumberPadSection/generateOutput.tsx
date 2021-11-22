@@ -18,13 +18,13 @@ const generateOutput = (text: string, output: string) => {
     case '.':
       if (output.indexOf('.') >= 0) {return output;}
       return output + '.';
-    case 'Delete':
+    case '删除':
       if (output.length === 1) {
         return '';
       } else {
         return output.slice(0, -1) || '';
       }
-    case 'Clear':
+    case '清空':
       return '';
     default:
       return '';

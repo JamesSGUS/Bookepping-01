@@ -65,6 +65,16 @@ const NpsWrapper = styled.section`
         background: #a9a9a9;
       }
     }
+
+    @media (max-height: 570px) {
+      > button {
+        height: 40px;
+
+        &.ok {
+          height: 80px;
+        }
+      }
+    }
   }
 `;
 
