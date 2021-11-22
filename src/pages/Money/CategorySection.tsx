@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, {useState} from 'react';
 import {Sglogo} from 'components/Sglogo';
-import img from './src/images/logo.jpg';
+import img from '../../images/logo.jpg';
 
 const Wrapper = styled.section`
   font-size: 24px;
@@ -49,7 +49,7 @@ const CategorySection: React.FC<Props> = (props) => {
         )}
       </ul>
       <Sglogo>
-        <img src="./images/logo.jpg" alt=""/>
+        <img src={img} alt=""/>
       </Sglogo>
     </Wrapper>
 
