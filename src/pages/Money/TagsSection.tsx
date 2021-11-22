@@ -3,7 +3,7 @@ import React from 'react';
 import {useTags} from 'hooks/useTags';
 
 const Wrapper = styled.section`
-  background: #FFFFFF;
+  background: #c7dff3;
   padding: 12px 16px;
   flex-shrink: 1;
   overflow: auto;
@@ -16,7 +16,7 @@ const Wrapper = styled.section`
     margin: 0 -12px;
 
     > li {
-      background: #c7dff3;
+      background: white;
       border-radius: 18px;
       display: inline-block;
       padding: 3px 18px;
