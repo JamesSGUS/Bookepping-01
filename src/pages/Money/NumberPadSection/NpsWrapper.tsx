@@ -6,8 +6,8 @@ const NpsWrapper = styled.section`
 
   > .output {
     background: white;
-    font-size: 36px;
-    line-height: 72px;
+    font-size: 28px;
+    line-height: 56px;
     text-align: right;
     padding: 0 16px;
     box-shadow: inset 0 -5px 5px -2px rgba(0, 0, 0, 0.25),
@@ -19,10 +19,10 @@ const NpsWrapper = styled.section`
       font-size: 18px;
       float: left;
       width: 25%;
-      height: 64px;
+      height: 54px;
 
       &.ok {
-        height: 128px;
+        height: 108px;
         float: right;
       }
 

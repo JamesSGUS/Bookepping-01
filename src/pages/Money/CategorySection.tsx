@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 import React, {useState} from 'react';
-import {Sglogo} from 'components/Sglogo';
+import {Sglogo} from '../../components/Sglogo';
 import img from '../../images/logo.jpg';
 
 const Wrapper = styled.section`
   font-size: 24px;
+  background: #c7dff3;
+  position: relative;
+  text-align: center;
 
   > ul {
     display: flex;
@@ -20,7 +23,7 @@ const Wrapper = styled.section`
         display: block;
         position: absolute;
         height: 3px;
-        background: #333;
+        background: #ff5000;
         width: 100%;
         bottom: 0;
         left: 0;
@@ -49,7 +52,7 @@ const CategorySection: React.FC<Props> = (props) => {
         )}
       </ul>
       <Sglogo>
-        <img src={img} alt=""/>
+        <img src={img} alt="img" className="center"/>
       </Sglogo>
     </Wrapper>
 

@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 const Sglogo = styled.div`
   display: flex;
-  background: #1a73eb;
-  position: fixed;
-  z-index: 2000;
-  color: white;
-  margin-left: 42%;
-  margin-top: -60px;
-  width: 60px;
-  height: 60px;
+  position: absolute;
+
+  .center {
+    width: 60px;
+    height: 60px;
+    margin-top: -60px;
+    margin-left: 218%;
+  }
 `;
 export {Sglogo};
 

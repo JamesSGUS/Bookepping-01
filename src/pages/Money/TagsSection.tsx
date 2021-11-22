@@ -16,7 +16,7 @@ const Wrapper = styled.section`
     margin: 0 -12px;
 
     > li {
-      background: #D9D9D9;
+      background: #c7dff3;
       border-radius: 18px;
       display: inline-block;
       padding: 3px 18px;
@@ -24,18 +24,20 @@ const Wrapper = styled.section`
       margin: 8px 12px;
 
       &.selected {
-        background: #f60;
+        background: #ff5000;
       }
     }
   }
 
   > button {
-    background: none;
+    background: #ff5000;
     border: none;
     padding: 2px 5px;
-    color: #666;
+    color: white;
     margin-top: 8px;
-    border-bottom: 1px solid #333;
+    margin-left: 39%;
+    margin-bottom: 10px;
+    //border-bottom: 1px solid #333;
   }
 `;
 type Props = {

@@ -4,7 +4,7 @@ import React from 'react';
 import Icon from './Icon';
 
 const NavWrapper = styled.nav`
-  background: white;
+  background: #c7dff3;
   line-height: 24px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 
@@ -27,10 +27,10 @@ const NavWrapper = styled.nav`
         }
 
         &.selected {
-          color: #f9ac2a;
+          color: #ff5000;
 
           .icon {
-            fill: #f9ac2a;
+            fill: #ff5000;
           }
         }
       }

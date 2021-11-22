@@ -9,6 +9,8 @@ import {Tag} from 'pages/Tag';
 
 const AppWrapper = styled.div`
   color: #333;
+  max-width: 320px;
+  margin: 0 auto;
 `;
 
 function App() {
