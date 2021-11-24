@@ -1,7 +1,7 @@
 {
   "name": "bookepping-01",
   "version": "0.1.0",
-  "homepage": "https://github.com/JamesSGUS/bookKepping-website/",
+  "homepage": "https://JamesSGUS.github.io/sg-website/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
