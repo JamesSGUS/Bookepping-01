@@ -11,6 +11,9 @@
 
 # production
 /build
+/scripts
+/config
+package.json
 
 # misc
 .DS_Store
