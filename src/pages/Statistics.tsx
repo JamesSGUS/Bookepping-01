@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import {RecordItem, useRecords} from 'hooks/useRecords';
 import {useTags} from 'hooks/useTags';
 import day from 'dayjs';
+import {ReactEcharts} from 'sgecharts';
+
 
 const CategoryWrapper = styled.div`
   background: white;
@@ -58,13 +60,17 @@ function Statistics() {
         <CategorySection value={category}
                          onChange={value => setCategory(value)}/>
       </CategoryWrapper>
+      <div>
+        <h1>using echarts</h1>
+        <ReactEcharts/>
+      </div>
       {array.map(([date, records]) => <div>
         <Header>
           {date}
         </Header>
         <div>
-          {records.map(r => {
-            return <Item>
+          {records.map((r, index) => {
+            return <Item key={index}>
               <div className="tags oneLine">
                 {r.tagIds
                   .map(tagId => <span key={tagId}>{getName(tagId)}</span>)

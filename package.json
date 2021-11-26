@@ -29,6 +29,7 @@
     "dayjs": "^1.10.7",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "echarts": "^5.2.2",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -85,7 +86,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "deploy": "sh scripts/deploy.sh"
+    "deploy:github": "sh scripts/deploy_github.sh",
+    "deploy:gitee": "sh scripts/deploy_gitee.sh"
   },
   "eslintConfig": {
     "extends": [
@@ -107,6 +109,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",
+    "@types/echarts": "^4.9.12",
     "@types/react-router-dom": "^5.3.2",
     "@types/styled-components": "^5.1.15",
     "@types/webpack-env": "1.15.1",
