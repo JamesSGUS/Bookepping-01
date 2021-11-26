@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {RecordItem, useRecords} from 'hooks/useRecords';
 import {useTags} from 'hooks/useTags';
 import day from 'dayjs';
-import {ReactEcharts} from 'sgecharts';
+import {ReactEcharts} from 'refecharts';
 
 
 const CategoryWrapper = styled.div`
@@ -64,7 +64,7 @@ function Statistics() {
         <h1>using echarts</h1>
         <ReactEcharts/>
       </div>
-      {array.map(([date, records]) => <div>
+      {array.map(([date, records], index) => <div key={index}>
         <Header>
           {date}
         </Header>
